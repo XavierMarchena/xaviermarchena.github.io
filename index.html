@@ -20,6 +20,255 @@
 	<!-- Custom styles -->
 	<link rel="stylesheet" href="assets/css/styles.css">
 
+	<!-- Enhanced Custom Styles -->
+	<style>
+		/* Typography improvements */
+		body {
+			font-size: 15px;
+			line-height: 1.7;
+		}
+
+		.lead {
+			font-size: 17px;
+			line-height: 1.8;
+			font-weight: 300;
+		}
+
+		/* Section spacing improvements */
+		.section {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		.topspace {
+			margin-top: 50px;
+		}
+
+		/* Professional Experience improvements */
+		#professionalexperience .col-md-3 {
+			margin-bottom: 40px;
+			padding: 20px;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		#professionalexperience .col-md-3:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+		}
+
+		#professionalexperience h3 {
+			font-size: 18px;
+			margin-bottom: 15px;
+			color: #2c5f8d;
+			font-weight: 600;
+			border-bottom: 2px solid #e0e0e0;
+			padding-bottom: 10px;
+		}
+
+		#professionalexperience p {
+			font-size: 13px;
+			margin-bottom: 12px;
+		}
+
+		#professionalexperience li {
+			font-size: 13px;
+			margin-bottom: 8px;
+			line-height: 1.6;
+			list-style: none;
+			position: relative;
+			padding-left: 20px;
+		}
+
+		#professionalexperience li:before {
+			content: "▸";
+			position: absolute;
+			left: 0;
+			color: #2c5f8d;
+			font-weight: bold;
+		}
+
+		#professionalexperience strong {
+			color: #2c5f8d;
+		}
+
+		#professionalexperience em {
+			display: block;
+			background: #f8f9fa;
+			padding: 10px;
+			border-left: 3px solid #2c5f8d;
+			margin-bottom: 15px;
+			font-style: italic;
+			color: #555;
+		}
+
+		/* Section titles */
+		.section-title {
+			margin-bottom: 30px;
+		}
+
+		.section-title span {
+			color: #2c5f8d;
+			font-size: 32px;
+			font-weight: 600;
+		}
+
+		/* Recent works improvements */
+		.recentworks .thumbnail {
+			border-radius: 8px;
+			overflow: hidden;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			border: 1px solid #e0e0e0;
+		}
+
+		.recentworks .thumbnail:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+		}
+
+		.recentworks .title {
+			font-size: 16px;
+			font-weight: 600;
+			color: #333;
+			margin-top: 10px;
+			display: block;
+		}
+
+		/* Education section styling */
+		#education .panel {
+			border-radius: 8px;
+			border: 1px solid #e0e0e0;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		#education .panel:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+		}
+
+		#education h4 {
+			color: #2c5f8d;
+			font-size: 18px;
+			margin-bottom: 8px;
+		}
+
+		#education p {
+			font-size: 15px;
+			color: #666;
+			margin-bottom: 0;
+		}
+
+		/* Certifications section */
+		#certifications img {
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			border-radius: 8px;
+		}
+
+		#certifications img:hover {
+			transform: scale(1.05);
+			box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+		}
+
+		/* Full resume button enhancement */
+		.panel-cta {
+			border-radius: 8px;
+			background: linear-gradient(135deg, #2c5f8d 0%, #1a3a54 100%);
+			border: none;
+			box-shadow: 0 4px 12px rgba(44, 95, 141, 0.3);
+		}
+
+		.panel-cta .btn-primary {
+			background: white;
+			color: #2c5f8d;
+			border: none;
+			padding: 15px 40px;
+			font-size: 18px;
+			font-weight: 600;
+			border-radius: 50px;
+			transition: all 0.3s ease;
+		}
+
+		.panel-cta .btn-primary:hover {
+			background: #f8f9fa;
+			transform: scale(1.05);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+		}
+
+		/* Footer improvements */
+		#footer {
+			background: #2c3e50;
+			color: #ecf0f1;
+		}
+
+		#footer .widget-title {
+			color: #fff;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+
+		#footer a {
+			color: #3498db;
+			transition: color 0.3s ease;
+		}
+
+		#footer a:hover {
+			color: #5dade2;
+		}
+
+		.follow-me-icons a {
+			display: inline-block;
+			margin: 0 10px;
+			transition: transform 0.3s ease;
+		}
+
+		.follow-me-icons a:hover {
+			transform: scale(1.2);
+		}
+
+		/* Navigation improvements */
+		.navbar-default {
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		.navbar-default .navbar-nav > li > a:hover {
+			color: #2c5f8d;
+		}
+
+		/* Responsive improvements */
+		@media (max-width: 991px) {
+			#professionalexperience .col-md-3 {
+				margin-bottom: 30px;
+			}
+
+			.section-title span {
+				font-size: 28px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.lead {
+				font-size: 15px;
+			}
+
+			#professionalexperience h3 {
+				font-size: 16px;
+			}
+
+			#professionalexperience p,
+			#professionalexperience li {
+				font-size: 12px;
+			}
+		}
+	</style>
+
 	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 </head>
 
@@ -30,7 +279,7 @@
 			<h1 id="logo" class="text-center">
 				<!-- <img class="img-circle" src="assets/images/guy.jpg" alt=""> -->
 				<span class="title">Xavier Marchena</span>
-				<span class="tagline">Full Stack Developer | Senior QA Automation Engineer<br>
+				<span class="tagline">QA Lead | Senior Test Automation Engineer | Full Stack Developer<br>
 					<!-- <a href="">xmarchena.xm@gmail.com</a></span> -->
 			</h1>
 		</div>
@@ -53,6 +302,7 @@
 						<li><a href="#recentworks">Recent Works</a></li>
 						<!-- <li><a href="blog.html">Technical Articles</a></li> -->
 						<li><a href="#fullresume">Full Resume</a></li>
+						<li><a href="#education">Education</a></li>
 						<li><a href="#certifications">Certifications</a></li>
 
 						<!-- 						<li class="dropdown">
@@ -78,7 +328,7 @@
 
 			<div class="row section topspace">
 				<div class="col-md-12">
-					<p class="lead text-center">With more than 7 years of experience as a full-stack developer, I am passionate about innovation and committed to delivering high-quality software solutions. I possess expertise in several programming languages, including Python, JavaScript, and Java, as well as hands-on experience with various development tools and frameworks. Throughout my career, I have worked on several complex projects, which has enabled me to gain a thorough understanding of the software development life cycle.</p>
+					<p class="lead text-center">Versatile technology professional with 9+ years of experience spanning QA leadership, test automation, and full-stack development. Currently serving as QA Lead overseeing quality assurance for complex cloud migrations and event-driven architectures. Proven track record of architecting robust testing frameworks across multiple languages (C#, TypeScript, Python, Ruby, Java) while maintaining strong full-stack development capabilities with modern frontend (Angular, React, Next.js) and backend (Node.js, .NET, Flask, Python) technologies. ISTQB-certified with expertise in leading distributed teams, implementing CI/CD practices, and delivering scalable solutions from concept to production.</p>
 				</div>
 			</div> <!-- / section -->
 
@@ -201,129 +451,84 @@
 			<div id="professionalexperience" class="row section featured topspace">
 				<h2 class="section-title"><span>Professional Experience</span></h2>
 				<div class="row">
+					
+					<!-- QA Lead Position -->
 					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">Smash | Senior Quality Assurance Automation Engineer, Full Time (Jul
-							2022 - Present)</h3>
-						<!-- <p>Environment: .NET, xUnit.net, C#, Microsoft SQL Server, Azure DevOps, Fiddler, PowerShell</p>
-						<p>
-							Responsibilities -->
+						<h3 class="text-center">Smash | QA Lead (April 2025 - Present)</h3>
+						<p><strong>Environment:</strong> C# .NET, xUnit.net, GitHub, AWS, Visual Studio Code, Claude Code, Terraform, Azure DevOps, Playwright, Cypress, NuGet, JMeter, Datadog, SQS, Kafka</p>
+						
+						<p><em>Leading QA initiatives for migration from monolithic .NET architecture to cloud-based, event-driven microservices. Responsible for quality assurance across the core Documents team, managing complex testing strategies for distributed systems including multiple APIs (Metadata, Content, Accounts) and event-driven workflows utilizing SQS and Kafka streams.</em></p>
 
-							<li>Participated in daily stand-up meetings, sprint planning sessions, and sprint
-								retrospectives to ensure that all team members were aligned and that the sprint goals
-								were being met.</li>
-							<br>
-							<li>Conducted manual testing to guarantee overall software quality, collaborating closely
-								with development teams to ensure timely development of test cases aligned with software
-								requirements.</li>
-							<br>
-
-							<li>
-								Oversaw test execution during sprints and reviewed the company's test automation
-								solution to guarantee its current and effective.
-							</li>
-							<br>
-							<li>
-								Created and maintained test plans, test cases, and test suites in Azure DevOps, ensuring
-								that all tests were properly tracked and executed as part of each sprint.
-							</li>
-							<br>
-							<li>
-								Used Fiddler to monitor and analyze API calls made by different applications, generating
-								and sending simulated error responses to assess the applications' error handling
-								capabilities.
-							</li>
-
-						<!-- </p> -->
-						<!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">RatherLabs | Performance Test Engineer, Part Time Contractor (November
-							2022 - February 2023)</h3>
-						<!-- <p>Environment: Artillery, Playwright, Node.js, Docker, Postman</p>
-						<p>
-							Responsibilities -->
-							<li>Worked with a team at RatherLabs to leverage Artillery, Playwright, and Node.js for the
-								purpose of designing and executing thorough performance tests that identified and
-								addressed key performance bottlenecks in a game under development. Specifically, I used
-								Artillery to simulate load on the game server and Playwright to automate interactions
-								with the game client, ensuring that both the server and client performance were
-								thoroughly tested.</li>
-								<br>
-							<li>Containerized the automation code with Docker, enabling test runs on multiple
-								environments. By containerizing the code, I ensured that the test environment was
-								consistent and isolated, which helped to avoid any conflicts with dependencies and
-								configurations that might affect the test results.</li>
-								<br>
-							<li>Collaborated closely with the development team to ensure test cases aligned with
-								software requirements and caught issues early in development. This included
-								participating in daily standups, sprint planning meetings, and code reviews, to ensure
-								that the test cases were in sync with the development progress and to identify any
-								potential issues or changes in requirements that might impact the testing process.</li>
-								<br>
-							<li>Used Postman to create mock servers based on expected responses, reducing usage of AWS
-								resources. By creating mock servers, I was able to test the API endpoints without
-								relying on the actual AWS resources, which reduced the testing costs and made the
-								testing process more efficient.</li>
-								<br>
-							<li>Monitored and analyzed test results using tools such as AWS CloudWatch and Artillery
-								logs. By analyzing the test results, I was able to identify the performance bottlenecks,
-								such as slow API responses or high CPU usage, and work with the development team to
-								optimize the game's performance.</li>
-								<br>
-						<!-- </p> -->
-						<!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">Proximity (10Pearls Company) | Mid-Quality Assurance Automation
-							Engineer, Full Time (Jun 2021 - April 2022)</h3>
-						<!-- <p>Environment: Appium, Ruby, Docker, Jenkins, Jest, Selenium, BrowserStack</p>
-						<p>Responsibilities -->
-						<li>Designed and developed a test automation framework for an iOS app using Appium, Ruby,
-							Docker, and Jenkins. This involved creating reusable code libraries, implementing best
-							practices for test automation, and developing a robust test strategy to ensure comprehensive
-							testing of the app across different iOS devices.</li>
-							<br>
-						<li>Utilized Appium to automate the testing process for the iOS app, which involved setting up
-							the Appium server, writing test scripts in Ruby, and executing the tests on real devices and
-							emulators.</li>
-							<br>
-						<li>Containerized the test automation code using Docker, which allowed for the tests to be run
-							on multiple environments and simplified the setup process for new team members.</li>
-							<br>
-						<li>Integrated the test automation framework with Jenkins, enabling the tests to be run
-							automatically on a regular basis, providing early feedback on the quality of the app, and
-							facilitating continuous integration and delivery practices.</li>
-							<br>
-						<li>Created automated tests for React applications using Jest, Selenium, and BrowserStack. This
-							involved writing test scripts in JavaScript, utilizing the Jest testing framework, and
-							leveraging Selenium and BrowserStack to run the tests on multiple browsers and devices. The
-							tests were designed to cover different scenarios and user flows, and were executed
-							automatically as part of the build process.</li>
-							<br>
-						<li>Collaborated with the development team to identify and fix issues found during the testing
-							process, utilizing tools such as JIRA and GitHub to track and manage issues.</li>
-							<br>
-						<li>Conducted code reviews and provided feedback to developers to ensure that code changes were
-							of high quality and aligned with best practices for test automation and software
-							development.</li>
-						<!-- </p> -->
-						<!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">RGT Global | Full Stack Developer, Full Time (Jan 2020 - Aug 2020)</h3>
-						<!-- <p>Environment: Python, Angular, Ionic, MySQL, MongoDB, Redis, Celery, Docker, SocketIO</p>
-						<p>Responsibilities -->
-						<li>Developed a Reports API using Python, Flask, NumPy, and Pandas libraries, running in Docker containers. The API allowed users to generate and view reports based on specific data criteria. The API was designed to be scalable and maintainable, with a modular architecture that could accommodate new features easily.</li>
+						<li>Lead comprehensive QA strategy across the platform evolution team, overseeing the entire testing pyramid including Unit, Contract, Integration, E2E, Synthetic, and Performance testing for event-driven architecture.</li>
 						<br>
-						<li>Developed a mobile client using Ionic for consuming the Reports API. The mobile client was designed to provide a user-friendly interface for viewing reports on mobile devices. It was built using the Ionic framework, which provided a set of pre-built UI components that made it easy to create a consistent and responsive UI across different devices.</li>
+						<li>Architect and implement testing strategies for distributed systems with event streaming, ensuring data integrity and message flow validation across SQS and Kafka streams consumed by downstream teams (OCR, Search, Navigation).</li>
 						<br>
-						<li>Implemented a payment API for the company's website using Python and Angular. The payment API allowed users to make payments on the website securely. The API was built using Python and Angular, which provided a combination of server-side and client-side capabilities. The payment API was integrated with several payment gateways, to provide users with a wide range of payment options.</li>
+						<li>Coordinate testing efforts for multiple API domains (Metadata, Content, Accounts) and event processors/publishers, ensuring seamless integration across microservices architecture.</li>
 						<br>
-						<li>Developed a full-stack MVP for a betting game using Angular, Python, SocketIO, MongoDB, and Celery with Redis, all running in Docker containers. The MVP was designed to provide users with a simple and intuitive interface for playing the betting game. The frontend was built using Angular, which provided a powerful set of UI components and a robust architecture for building complex applications. The backend was built using Python and utilized SocketIO for real-time communication between the server and clients. MongoDB was used as the primary database, providing fast and scalable data storage. Celery with Redis was used for task queuing and processing, providing a highly scalable and fault-tolerant task processing system. All of these technologies were containerized using Docker, making the application portable and easily deployable.</li>
-
-						<!-- </p> -->
-						<!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
+						<li>Partner with engineering managers and lead developers to continuously refine test strategies aligned with cloud migration initiatives, architectural changes, and business priorities.</li>
+						<br>
+						<li>Mentor QA engineers on event-driven testing patterns, message queue validation, and distributed system quality assurance.</li>
 					</div>
+
+					<!-- Senior QA Automation Engineer Position -->
+					<div class="col-sm-6 col-md-3">
+						<h3 class="text-center">Smash | Senior Quality Assurance Automation Engineer (July 2022 - April 2025)</h3>
+						<p><strong>Modernization Team (Aug 2022 - July 2024)</strong></p>
+						<p><strong>Environment:</strong> C# .NET, xUnit.net, GitHub, Azure B2C, Visual Studio Code, GitHub Copilot, Terraform, Azure DevOps, Selenium, Cypress, NuGet</p>
+
+						<li>Architected and developed three distinct test automation frameworks supporting the monolith-to-microservices modernization: E2E framework (C#, Selenium, FluentAssertions), Integration/API framework (xUnit, C#), and Frontend framework (Cypress for React).</li>
+						<br>
+						<li>Designed and implemented a comprehensive Testing SDK with reusable client methods for API testing, packaged as a NuGet library for seamless integration across testing environments.</li>
+						<br>
+						<li>Collaborated with distributed remote teams to strategically plan and execute the refactoring initiative, ensuring quality gates throughout the migration.</li>
+						<br>
+
+						<p><strong>Organizers Team (Jul 2022 - Aug 2023)</strong></p>
+						<p><strong>Environment:</strong> C# .NET, xUnit.net, Microsoft SQL Server, Azure DevOps, Fiddler, PowerShell, TestStack.White, FlaUI</p>
+
+						<li>Conducted comprehensive manual testing while collaborating closely with development teams to ensure timely test case creation aligned with software requirements.</li>
+						<br>
+						<li>Developed and maintained detailed test plans, test cases, and test suites within Azure DevOps, ensuring thorough test coverage for each sprint.</li>
+						<br>
+						<li>Utilized Fiddler for API traffic monitoring and analysis, simulating error responses to validate application error-handling capabilities.</li>
+					</div>
+
+					<!-- RGT Global - Full Stack Developer -->
+					<div class="col-sm-6 col-md-3">
+						<h3 class="text-center">RGT Global | Full Stack Developer (Jan 2020 - Aug 2020)</h3>
+						<p><strong>Environment:</strong> Python, Angular, Ionic, Flask, MySQL, MongoDB, Redis, Celery, Docker, SocketIO, NumPy, Pandas</p>
+						
+						<li>Architected and developed scalable microservices-based Reports API using Python, Flask, NumPy, and Pandas in Docker containers, implementing data aggregation and analysis features for business intelligence reporting.</li>
+						<br>
+						<li>Built cross-platform mobile application with Ionic and Angular, implementing responsive UI/UX design patterns and ensuring consistent experience across iOS, Android, and web platforms.</li>
+						<br>
+						<li>Designed and implemented secure payment processing system integrated with multiple payment gateways (Stripe, PayPal), incorporating PCI compliance standards and transaction validation logic.</li>
+						<br>
+						<li>Developed full-stack real-time betting game proof of concept featuring WebSocket communication (SocketIO), demonstrating proficiency in building interactive applications with Angular frontend, Python backend, and MongoDB for data persistence.</li>
+						<br>
+						<li>Implemented asynchronous task processing using Celery with Redis message broker for handling background jobs, improving application responsiveness and scalability for high-volume operations.</li>
+						<br>
+						<li>Performed advanced data analysis and ETL operations using Python, NumPy, and Pandas, creating automated reporting pipelines that provided actionable business insights.</li>
+					</div>
+
+					<!-- Universidad de Costa Rica - Software Developer -->
+					<div class="col-sm-6 col-md-3">
+						<h3 class="text-center">Universidad de Costa Rica | Software Developer (Jan 2018 - Jan 2019)</h3>
+						<p><strong>Environment:</strong> Java, PHP, WordPress, Docker, LibreOffice SDK, Shell Script, Batch Script, Git</p>
+						
+						<li>Led research and development initiatives focused on Free and Open Source Software (FOSS) solutions, evaluating technologies and implementing systems to benefit university operations and reduce software licensing costs.</li>
+						<br>
+						<li>Developed custom Java extension for LibreOffice using the LibreOffice SDK, implementing automation features and custom functionality that improved document processing efficiency for university administrative staff.</li>
+						<br>
+						<li>Architected and maintained WordPress-based institutional website, implementing custom themes and plugins while establishing Docker-based development environment to ensure consistency across development, staging, and production.</li>
+						<br>
+						<li>Designed and developed cross-platform software installer using Java, implementing platform detection logic and automated deployment scripts (Shell Script for Linux/macOS, Batch Script for Windows) to simplify software distribution.</li>
+						<br>
+						<li>Created comprehensive technical documentation and training materials, delivering hands-on training sessions to university staff to facilitate adoption of newly developed tools.</li>
+						<br>
+						<li>Collaborated with university departments to identify workflow inefficiencies and pain points, developing custom automation solutions that reduced manual processes and improved operational efficiency.</li>
+					</div>
+
 				</div>
 			</div> <!-- / section -->
 
@@ -338,8 +543,20 @@
 								and taking it away from the other guy. no, this is mount everest. </p>
 						</div> -->
 						<div  class="col-lg-12 text-center">
-							<a href="./assets/XavierMarchena-2024-resume.pdf"
+							<a href="./assets/XavierMarchena-resume.pdf"
 								class="btn btn-primary btn-lg" download target="_blank">Download Full Resume</a>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /section -->
+
+			<div id="education" class="row section topspace">
+				<h2 class="section-title"><span>Education</span></h2>
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h4><strong>Bachelor's Degree in Computer Systems Engineering</strong></h4>
+							<p>Universidad Fidélidas, San José, Costa Rica</p>
 						</div>
 					</div>
 				</div>
@@ -426,7 +643,7 @@
 				<div class="col-md-6 widget">
 					<div class="widget-body">
 						<p class="text-right">
-							Copyright &copy; 2023, Xavier Marchena<br>
+							Copyright &copy; 2025, Xavier Marchena<br>
 							Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> </p>
 					</div>
 				</div>
