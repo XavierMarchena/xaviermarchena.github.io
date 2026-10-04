@@ -1,6 +1,6 @@
 /* ==========================================================================
    Xavier Marchena — Portfolio
-   Editorial Swiss design system — paper, ink, vermillion
+   Editorial Swiss design system — bone paper, ink, International Klein Blue
    Type: Space Grotesk (display/body) · IBM Plex Mono (meta/labels)
    ========================================================================== */
 
@@ -9,20 +9,21 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Paper & ink */
-  --paper: #f3f0e8;
-  --paper-2: #eae6db;
-  --ink: #14130f;
-  --ink-soft: #3c3931;
-  --muted: #6e6a5e;
-  --on-ink: #e9e5da;
-  --on-ink-muted: #9c978a;
+  --paper: #f3efe7;
+  --paper-2: #eae6dc;
+  --ink: #101014;
+  --ink-soft: #3a3a40;
+  --muted: #6b6a63;
+  --on-ink: #eceae2;
+  --on-ink-muted: #9a988f;
 
-  /* Accent — vermillion */
-  --accent: #d93b12;
-  --accent-deep: #b02c0a;
+  /* Accent — International Klein Blue */
+  --accent: #002fa7;
+  --accent-deep: #002689;
+  --accent-light: #7d9bff; /* accent on ink surfaces (band, footer) */
 
   /* Rules */
-  --hairline: #cbc4b3;
+  --hairline: #cfccc0;
   --rule: 1px solid var(--ink);
   --hair: 1px solid var(--hairline);
 
@@ -120,6 +121,12 @@ dd {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+/* Focus rings need the light accent on ink surfaces (band, footer) */
+.band :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--accent-light);
 }
 
 .container {
@@ -302,7 +309,7 @@ header[id] {
 }
 
 .site-nav.is-stuck {
-  box-shadow: 0 1px 0 var(--ink), 0 10px 30px rgba(20, 19, 15, 0.07);
+  box-shadow: 0 1px 0 var(--ink), 0 10px 30px rgba(16, 16, 20, 0.07);
 }
 
 .site-nav__inner {
@@ -893,6 +900,10 @@ header[id] {
   margin-bottom: 1.25rem;
 }
 
+.band .section-head__index b {
+  color: var(--accent-light); /* accent is unreadable on ink */
+}
+
 .band h2 {
   color: var(--paper);
   font-size: clamp(2.25rem, 6vw, 4.5rem);
@@ -926,6 +937,16 @@ header[id] {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.band .btn--solid {
+  border-color: var(--accent-light); /* outline the deep-blue block against ink */
+}
+
+.band .btn--solid:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: var(--ink);
 }
 
 /* --------------------------------------------------------------------------
@@ -1049,18 +1070,18 @@ header[id] {
   white-space: nowrap;
   overflow: hidden;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(233, 229, 218, 0.4);
+  -webkit-text-stroke: 1.5px rgba(236, 234, 226, 0.4);
 }
 
 @supports not (-webkit-text-stroke: 1px black) {
   .footer-flourish {
-    color: rgba(233, 229, 218, 0.25);
+    color: rgba(236, 234, 226, 0.25);
   }
 }
 
 .site-footer__contact {
   padding-block: clamp(1.75rem, 4vw, 2.75rem);
-  border-bottom: 1px solid rgba(233, 229, 218, 0.18);
+  border-bottom: 1px solid rgba(236, 234, 226, 0.18);
 }
 
 .site-footer__contact .mono {
@@ -1079,7 +1100,7 @@ header[id] {
 }
 
 .footer-mail:hover {
-  color: var(--accent);
+  color: var(--accent-light);
 }
 
 .site-footer__grid {
@@ -1087,7 +1108,7 @@ header[id] {
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(2rem, 5vw, 3.5rem);
   padding-block: clamp(2rem, 5vw, 3rem);
-  border-bottom: 1px solid rgba(233, 229, 218, 0.18);
+  border-bottom: 1px solid rgba(236, 234, 226, 0.18);
 }
 
 .site-footer__grid h2 {
@@ -1118,11 +1139,11 @@ header[id] {
 .site-footer__grid a svg {
   width: 0.85em;
   height: 0.85em;
-  color: var(--accent);
+  color: var(--accent-light);
 }
 
 .site-footer__grid a:hover {
-  color: var(--accent);
+  color: var(--accent-light);
 }
 
 .site-footer__grid address {
@@ -1146,7 +1167,7 @@ header[id] {
 
 .site-footer__bottom a {
   color: var(--on-ink-muted);
-  border-bottom: 1px solid rgba(233, 229, 218, 0.35);
+  border-bottom: 1px solid rgba(236, 234, 226, 0.35);
 }
 
 .site-footer__bottom a:hover {
