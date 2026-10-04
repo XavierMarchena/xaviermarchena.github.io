@@ -63,12 +63,14 @@
     document.querySelectorAll(".site-nav__links a[href^='#']")
   );
 
-  if ("IntersectionObserver" in window && navLinks.length) {
+  if (navLinks.length) {
     var sections = navLinks
       .map(function (link) {
         return document.querySelector(link.getAttribute("href"));
       })
       .filter(Boolean);
+
+    var currentId = null;
 
     var setActive = function (id) {
       navLinks.forEach(function (link) {
@@ -82,18 +84,28 @@
       });
     };
 
-    var spy = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
-    );
+    // Position-based: highlight whichever section sits under the reading
+    // line (~42% of the viewport). Deterministic across instant jumps and
+    // scroll restoration, where an intersection-band spy can go stale
+    // (no section in the band -> nothing ever updates).
+    var updateSpy = function () {
+      var line = window.scrollY + window.innerHeight * 0.42;
+      var next = null;
+      for (var i = 0; i < sections.length; i++) {
+        var top = sections[i].offsetTop;
+        if (line >= top && line < top + sections[i].offsetHeight) {
+          next = sections[i].id;
+          break;
+        }
+      }
+      if (next !== currentId) {
+        currentId = next;
+        setActive(next);
+      }
+    };
 
-    sections.forEach(function (section) {
-      spy.observe(section);
-    });
+    window.addEventListener("scroll", updateSpy, { passive: true });
+    updateSpy();
   }
 
   /* ----------------------------------------------------------------------

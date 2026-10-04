@@ -13,7 +13,7 @@
   --paper-2: #eae6dc;
   --ink: #101014;
   --ink-soft: #3a3a40;
-  --muted: #6b6a63;
+  --muted: #64635c; /* AA on paper AND paper-2 (4.84:1 on alt) */
   --on-ink: #eceae2;
   --on-ink-muted: #9a988f;
 
