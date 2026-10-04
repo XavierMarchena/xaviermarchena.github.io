@@ -124,12 +124,36 @@
   }
 
   /* ----------------------------------------------------------------------
-     Respect reduced motion for autoplaying project videos
+     Project previews — muted loops play while in view, pause offscreen.
+
+     These are content previews (equivalent to the animated GIFs the site
+     previously shipped), so they are not gated behind prefers-reduced-motion;
+     that preference still governs the reveal/transition animations above.
      ---------------------------------------------------------------------- */
-  if (reduceMotion) {
-    document.querySelectorAll("video[autoplay]").forEach(function (video) {
-      video.removeAttribute("autoplay");
-      video.pause();
+  var previews = document.querySelectorAll(".plate__media video");
+
+  if (previews.length && "IntersectionObserver" in window) {
+    var player = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var attempt = entry.target.play();
+            if (attempt && typeof attempt.catch === "function") {
+              attempt.catch(function () {
+                /* autoplay blocked — poster stays until the user interacts */
+              });
+            }
+          } else {
+            entry.target.pause();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    previews.forEach(function (video) {
+      video.pause(); // avoid all three playing from page load until observed
+      player.observe(video);
     });
   }
 })();
