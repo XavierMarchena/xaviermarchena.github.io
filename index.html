@@ -4,664 +4,531 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+	<meta name="description" content="Xavier Marchena — QA Lead, Senior Test Automation Engineer and Full Stack Developer based in Costa Rica. 9+ years designing test automation frameworks and shipping full-stack products.">
+	<meta name="author" content="Xavier Marchena">
+	<meta name="theme-color" content="#f3efe7">
 
-	<title>Xavier Marchena Portfolio</title>
+	<title>Xavier Marchena — QA Lead &amp; Test Automation Engineer</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-	<!-- Bootstrap -->
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-	<!-- Icons -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Fonts: Space Grotesk (display) + IBM Plex Mono (meta) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300..700&display=swap">
+
 	<!-- Custom styles -->
-	<link rel="stylesheet" href="assets/css/styles.css">
-
-	<!-- Enhanced Custom Styles -->
-	<style>
-		/* Typography improvements */
-		body {
-			font-size: 15px;
-			line-height: 1.7;
-			color: #333;
-		}
-
-		.lead {
-			font-size: 17px;
-			line-height: 1.8;
-			font-weight: 400;
-			color: #2c3e50;
-		}
-
-		/* Section spacing improvements */
-		.section {
-			padding-top: 40px;
-			padding-bottom: 40px;
-		}
-
-		.topspace {
-			margin-top: 50px;
-		}
-
-		/* Professional Experience improvements */
-		#professionalexperience .col-md-3 {
-			margin-bottom: 40px;
-			padding: 20px;
-			background: #fff;
-			border-radius: 8px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		#professionalexperience .col-md-3:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-		}
-
-		#professionalexperience h3 {
-			font-size: 18px;
-			margin-bottom: 15px;
-			color: #2c5f8d;
-			font-weight: 600;
-			border-bottom: 2px solid #e0e0e0;
-			padding-bottom: 10px;
-		}
-
-		#professionalexperience p {
-			font-size: 13px;
-			margin-bottom: 12px;
-			color: #444;
-		}
-
-		#professionalexperience li {
-			font-size: 13px;
-			margin-bottom: 8px;
-			line-height: 1.6;
-			list-style: none;
-			position: relative;
-			padding-left: 20px;
-			color: #444;
-		}
-
-		#professionalexperience li:before {
-			content: "▸";
-			position: absolute;
-			left: 0;
-			color: #2c5f8d;
-			font-weight: bold;
-		}
-
-		#professionalexperience strong {
-			color: #2c5f8d;
-		}
-
-		#professionalexperience em {
-			display: block;
-			background: #f8f9fa;
-			padding: 10px;
-			border-left: 3px solid #2c5f8d;
-			margin-bottom: 15px;
-			font-style: italic;
-			color: #2c3e50;
-		}
-
-		/* Section titles */
-		.section-title {
-			margin-bottom: 30px;
-		}
-
-		.section-title span {
-			color: #2c5f8d;
-			font-size: 32px;
-			font-weight: 600;
-		}
-
-		/* Recent works improvements */
-		.recentworks .thumbnail {
-			border-radius: 8px;
-			overflow: hidden;
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			border: 1px solid #e0e0e0;
-		}
-
-		.recentworks .thumbnail:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-		}
-
-		.recentworks .title {
-			font-size: 16px;
-			font-weight: 600;
-			color: #2c3e50;
-			margin-top: 10px;
-			display: block;
-		}
-
-		/* Education section styling */
-		#education .panel {
-			border-radius: 8px;
-			border: 1px solid #e0e0e0;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		#education .panel:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 8px 15px rgba(0,0,0,0.12);
-		}
-
-		#education h4 {
-			color: #2c5f8d;
-			font-size: 18px;
-			margin-bottom: 8px;
-		}
-
-		#education p {
-			font-size: 15px;
-			color: #555;
-			margin-bottom: 0;
-		}
-
-		/* Certifications section */
-		#certifications img {
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			border-radius: 8px;
-		}
-
-		#certifications img:hover {
-			transform: scale(1.05);
-			box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-		}
-
-		/* Full resume button enhancement */
-		.panel-cta {
-			border-radius: 8px;
-			background: linear-gradient(135deg, #2c5f8d 0%, #1a3a54 100%);
-			border: none;
-			box-shadow: 0 4px 12px rgba(44, 95, 141, 0.3);
-		}
-
-		.panel-cta .btn-primary {
-			background: white;
-			color: #2c5f8d;
-			border: none;
-			padding: 15px 40px;
-			font-size: 18px;
-			font-weight: 600;
-			border-radius: 50px;
-			transition: all 0.3s ease;
-		}
-
-		.panel-cta .btn-primary:hover {
-			background: #f8f9fa;
-			transform: scale(1.05);
-			box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-		}
-
-		/* Footer improvements */
-		#footer {
-			background: #2c3e50;
-			color: #ecf0f1;
-		}
-
-		#footer .widget-title {
-			color: #fff;
-			font-weight: 600;
-			margin-bottom: 20px;
-		}
-
-		#footer a {
-			color: #3498db;
-			transition: color 0.3s ease;
-		}
-
-		#footer a:hover {
-			color: #5dade2;
-		}
-
-		.follow-me-icons a {
-			display: inline-block;
-			margin: 0 10px;
-			transition: transform 0.3s ease;
-		}
-
-		.follow-me-icons a:hover {
-			transform: scale(1.2);
-		}
-
-		/* Navigation improvements */
-		.navbar-default {
-			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-		}
-
-		.navbar-default .navbar-nav > li > a {
-			font-weight: 500;
-			transition: color 0.3s ease;
-		}
-
-		.navbar-default .navbar-nav > li > a:hover {
-			color: #2c5f8d;
-		}
-
-		/* Responsive improvements */
-		@media (max-width: 991px) {
-			#professionalexperience .col-md-3 {
-				margin-bottom: 30px;
-			}
-
-			.section-title span {
-				font-size: 28px;
-			}
-		}
-
-		@media (max-width: 767px) {
-			.lead {
-				font-size: 15px;
-			}
-
-			#professionalexperience h3 {
-				font-size: 16px;
-			}
-
-			#professionalexperience p,
-			#professionalexperience li {
-				font-size: 12px;
-			}
-		}
-	</style>
-
-	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+	<link rel="stylesheet" href="assets/css/modern.css">
 </head>
 
-<body class="home">
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
 
-	<header id="header">
-		<div id="head" class="parallax" parallax-speed="2">
-			<h1 id="logo" class="text-center">
-				<!-- <img class="img-circle" src="assets/images/guy.jpg" alt=""> -->
-				<span class="title">Xavier Marchena</span>
-				<span class="tagline">QA Lead | Senior Test Automation Engineer | Full Stack Developer<br>
-					<!-- <a href="">xmarchena.xm@gmail.com</a></span> -->
-			</h1>
+	<!-- ====================================================================
+	     Navigation
+	     ==================================================================== -->
+	<nav class="site-nav" aria-label="Primary">
+		<div class="container site-nav__inner">
+			<a class="site-nav__brand" href="#top">XM<span class="accent">*</span></a>
+
+			<button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="visually-hidden">Menu</span>
+			</button>
+
+			<ul class="site-nav__links" id="primary-menu">
+				<li><a href="#about">About</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#resume">Résumé</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#certifications">Certifications</a></li>
+			</ul>
 		</div>
+	</nav>
 
-		<nav class="navbar navbar-default navbar-sticky">
-			<div class="container-fluid">
-
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-					</button>
-				</div>
-
-				<div class="navbar-collapse collapse">
-
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#professionalexperience">Professional Experience</a></li>
-						<li><a href="#recentworks">Recent Works</a></li>
-						<!-- <li><a href="blog.html">Technical Articles</a></li> -->
-						<li><a href="#fullresume">Full Resume</a></li>
-						<li><a href="#education">Education</a></li>
-						<li><a href="#certifications">Certifications</a></li>
-
-						<!-- 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b
-									class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="sidebar-left.html">Left Sidebar</a></li>
-								<li><a href="sidebar-right.html">Right Sidebar</a></li>
-								<li><a href="single.html">Blog </a></li>
-							</ul>
-						</li> -->
-
-					</ul>
-
-				</div><!--/.nav-collapse -->
+	<!-- ====================================================================
+	     Masthead
+	     ==================================================================== -->
+	<header class="masthead" id="top">
+		<div class="container">
+			<div class="masthead__bar">
+				<span>Portfolio — 2026</span>
+				<span>QA Lead / Test Automation / Full Stack</span>
+				<span>San José, Costa Rica</span>
 			</div>
-		</nav>
+
+			<h1 class="masthead__name">
+				<span class="masthead__line">Xavier</span>
+				<span class="masthead__line masthead__line--outline">Marchena</span>
+			</h1>
+
+			<div class="masthead__grid">
+				<dl class="masthead__meta">
+					<div class="meta__item">
+						<dt>Role</dt>
+						<dd>QA Lead</dd>
+					</div>
+					<div class="meta__item">
+						<dt>Experience</dt>
+						<dd>9+ Years</dd>
+					</div>
+					<div class="meta__item">
+						<dt>Focus</dt>
+						<dd>Test Automation &amp; Cloud QA</dd>
+					</div>
+					<div class="meta__item">
+						<dt>Certification</dt>
+						<dd>ISTQB®</dd>
+					</div>
+				</dl>
+
+				<div class="masthead__actions">
+					<a class="btn btn--solid" href="./assets/XavierMarchena-resume.pdf" download>
+						Résumé PDF
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+					</a>
+					<a class="btn" href="mailto:xmarchena.xm@gmail.com">Email</a>
+					<a class="btn" href="https://github.com/XavierMarchena" target="_blank" rel="noopener">
+						GitHub
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+					</a>
+					<a class="btn" href="https://www.linkedin.com/in/xavier-marchena-357bb617b/" target="_blank" rel="noopener">
+						LinkedIn
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+					</a>
+				</div>
+			</div>
+
+			<p class="masthead__ticker">
+				<span>Playwright</span><span class="sep">/</span>
+				<span>Cypress</span><span class="sep">/</span>
+				<span>Selenium</span><span class="sep">/</span>
+				<span>C# · .NET</span><span class="sep">/</span>
+				<span>TypeScript</span><span class="sep">/</span>
+				<span>Python</span><span class="sep">/</span>
+				<span>Java</span><span class="sep">/</span>
+				<span>React · Next.js</span><span class="sep">/</span>
+				<span>AWS</span><span class="sep">/</span>
+				<span>Kafka · SQS</span>
+			</p>
+		</div>
 	</header>
 
 	<main id="main">
 
-		<div class="container">
+		<!-- ====================================================================
+		     01 — About
+		     ==================================================================== -->
+		<section class="section" id="about" aria-labelledby="about-title">
+			<div class="container">
+				<header class="section-head">
+					<p class="section-head__index"><span><b>01</b> — About</span><span>Profile</span></p>
+					<h2 id="about-title">Quality engineering with a full-stack mindset</h2>
+				</header>
 
-			<div class="row section topspace">
-				<div class="col-md-12">
-					<p class="lead text-center">Versatile technology professional with 9+ years of experience spanning QA leadership, test automation, and full-stack development. Currently serving as QA Lead overseeing quality assurance for complex cloud migrations and event-driven architectures. Proven track record of architecting robust testing frameworks across multiple languages (C#, TypeScript, Python, Ruby, Java) while maintaining strong full-stack development capabilities with modern frontend (Angular, React, Next.js) and backend (Node.js, .NET, Flask, Python) technologies. ISTQB-certified with expertise in leading distributed teams, implementing CI/CD practices, and delivering scalable solutions from concept to production.</p>
+				<div class="about__grid">
+					<div class="about__body reveal">
+						<p>
+							I'm a versatile technology professional with 9+ years of experience spanning QA
+							leadership, test automation, and full-stack development. As QA Lead I oversee
+							quality assurance for complex cloud migrations and event-driven architectures,
+							architecting robust testing frameworks across multiple languages
+							(C#, TypeScript, Python, Ruby, Java).
+						</p>
+						<p>
+							I maintain strong full-stack development capabilities with modern frontend
+							(Angular, React, Next.js) and backend (Node.js, .NET, Flask, Python)
+							technologies, and I'm ISTQB-certified with a track record of leading distributed
+							teams, implementing CI/CD practices, and delivering scalable solutions from
+							concept to production.
+						</p>
+					</div>
+
+					<dl class="spec reveal" style="--reveal-delay: 100ms">
+						<div class="spec__row">
+							<dt>Experience</dt>
+							<dd>9+ Years</dd>
+						</div>
+						<div class="spec__row">
+							<dt>Automation</dt>
+							<dd>5 Languages</dd>
+						</div>
+						<div class="spec__row">
+							<dt>Stack</dt>
+							<dd>C# / TS / Python / Ruby / Java</dd>
+						</div>
+						<div class="spec__row">
+							<dt>Certification</dt>
+							<dd>ISTQB® Certified</dd>
+						</div>
+						<div class="spec__row">
+							<dt>Leadership</dt>
+							<dd>Distributed QA Teams</dd>
+						</div>
+					</dl>
 				</div>
-			</div> <!-- / section -->
+			</div>
+		</section>
 
-			<div id="recentworks" class="row section recentworks topspace">
+		<!-- ====================================================================
+		     02 — Selected work
+		     ==================================================================== -->
+		<section class="section section--alt" id="work" aria-labelledby="work-title">
+			<div class="container">
+				<header class="section-head">
+					<p class="section-head__index"><span><b>02</b> — Selected work</span><span>Open Source</span></p>
+					<h2 id="work-title">Recent works</h2>
+					<p class="section-head__intro">Open-source projects spanning performance testing, full-stack development and cross-platform tooling.</p>
+				</header>
 
-				<h2 class="section-title"><span>Recent Works</span></h2>
+				<div class="plates">
+					<article class="plate reveal">
+						<figure class="plate__media">
+							<video src="assets/images/playwrightartillery.mp4"
+							       poster="assets/images/playwrightartillery-poster.jpg"
+							       width="600" height="338" autoplay muted loop playsinline
+							       aria-label="Demo of performance tests running with Artillery and Playwright"></video>
+						</figure>
+						<div class="plate__info">
+							<p class="plate__num" aria-hidden="true">01</p>
+							<h3>Performance Tests with Artillery and Playwright</h3>
+							<p class="plate__desc">Docker-based performance testing harness pairing Artillery with Playwright for realistic browser-load scenarios.</p>
+							<ul class="plate__tags">
+								<li>Artillery</li>
+								<li>Playwright</li>
+								<li>Docker</li>
+							</ul>
+							<a class="link-arrow" href="https://github.com/XavierMarchena/artillery-playwright-docker" target="_blank" rel="noopener">
+								View repository
+								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+							</a>
+						</div>
+					</article>
 
-				<div class="thumbnails recentworks row">
+					<article class="plate reveal">
+						<figure class="plate__media">
+							<video src="assets/images/btcoptions.mp4"
+							       poster="assets/images/btcoptions-poster.jpg"
+							       width="600" height="338" autoplay muted loop playsinline
+							       aria-label="Demo of a full stack options game built with Angular and Python"></video>
+						</figure>
+						<div class="plate__info">
+							<p class="plate__num" aria-hidden="true">02</p>
+							<h3>Full Stack Game Developed with Angular and Python</h3>
+							<p class="plate__desc">Real-time options game with an Angular frontend and a Python backend handling market data and state.</p>
+							<ul class="plate__tags">
+								<li>Angular</li>
+								<li>Python</li>
+								<li>Full Stack</li>
+							</ul>
+							<a class="link-arrow" href="https://github.com/XavierMarchena/btcoptions" target="_blank" rel="noopener">
+								View repository
+								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+							</a>
+						</div>
+					</article>
 
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="https://github.com/XavierMarchena/artillery-playwright-docker" target="_blank">
-							<span class="img">
-								<img src="assets/images/playwrightartillery.gif" alt="">
-								<span class="cover"><span class="more">See repository &rarr;</span></span>
-							</span>
-							<span class="title">Performance Tests with Artillery and Playwright</span>
-						</a>
-<!-- 						<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a> | <a
-								href="">Logotype</a></span> -->
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="https://github.com/XavierMarchena/btcoptions" target="_blank">
-							<span class="img">
-								<img src="assets/images/btcoptions.gif" alt="">
-								<span class="cover"><span class="more">See repository &rarr;</span></span>
-							</span>
-							<span class="title">Full Stack Game Developed with Angular and Python</span>
-						</a>
-<!-- 						<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a> | <a
-								href="">Logotype</a></span> -->
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="https://github.com/XavierMarchena/firmadigital-multiplataforma" target="_blank">
-							<span class="img">
-								<img src="assets/images/fdmp_ubuntu.gif" alt="">
-								<span class="cover"><span class="more">See repository &rarr;</span></span>
-							</span>
-							<span class="title">Cross-platform installer for digital signature software</span>
-						</a>
-<!-- 						<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a> | <a
-								href="">Logotype</a></span> -->
-						<h4></h4>
-						<p></p>
-					</div>
-
-<!-- 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="sidebar-right.html">
-							<span class="img">
-								<img src="assets/images/s1.jpg" alt="">
-								<span class="cover"><span class="more">See details &rarr;</span></span>
-							</span>
-							<span class="title">Pure ipsum - development services for people</span>
-						</a>
-						<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a></span>
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="sidebar-right.html">
-							<span class="img">
-								<img src="assets/images/s1.jpg" alt="">
-								<span class="cover"><span class="more">See details &rarr;</span></span>
-							</span>
-							<span class="title">Lorem studios - interior and patio design</span>
-						</a>
-						<span class="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="sidebar-right.html">
-							<span class="img">
-								<img src="assets/images/s1.jpg" alt="">
-								<span class="cover"><span class="more">See details &rarr;</span></span>
-							</span>
-							<span class="title">Pure ipsum - development services for people</span>
-						</a>
-						<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a></span>
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="sidebar-right.html">
-							<span class="img">
-								<img src="assets/images/s1.jpg" alt="">
-								<span class="cover"><span class="more">See details &rarr;</span></span>
-							</span>
-							<span class="title">Lorem studios - interior and patio design</span>
-						</a>
-						<span class="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="sidebar-right.html">
-							<span class="img">
-								<img src="assets/images/s1.jpg" alt="">
-								<span class="cover"><span class="more">See details &rarr;</span></span>
-							</span>
-							<span class="title">Lorem studios - interior and patio design</span>
-						</a>
-						<span class="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
-						<h4></h4>
-						<p></p>
-					</div> -->
+					<article class="plate reveal">
+						<figure class="plate__media">
+							<video src="assets/images/fdmp_ubuntu.mp4"
+							       poster="assets/images/fdmp_ubuntu-poster.jpg"
+							       width="600" height="338" autoplay muted loop playsinline
+							       aria-label="Demo of the cross-platform installer running on Ubuntu"></video>
+						</figure>
+						<div class="plate__info">
+							<p class="plate__num" aria-hidden="true">03</p>
+							<h3>Cross-platform Installer for Digital Signature Software</h3>
+							<p class="plate__desc">Single installer distributing digital signature software across Linux, Windows and macOS.</p>
+							<ul class="plate__tags">
+								<li>Cross-platform</li>
+								<li>Installer</li>
+								<li>Desktop</li>
+							</ul>
+							<a class="link-arrow" href="https://github.com/XavierMarchena/firmadigital-multiplataforma" target="_blank" rel="noopener">
+								View repository
+								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+							</a>
+						</div>
+					</article>
 				</div>
+			</div>
+		</section>
 
-			</div> <!-- /section -->
+		<!-- ====================================================================
+		     03 — Experience
+		     ==================================================================== -->
+		<section class="section" id="experience" aria-labelledby="experience-title">
+			<div class="container">
+				<header class="section-head">
+					<p class="section-head__index"><span><b>03</b> — Experience</span><span>2018 — Present</span></p>
+					<h2 id="experience-title">Professional experience</h2>
+					<p class="section-head__intro">A decade of quality engineering and full-stack delivery.</p>
+				</header>
 
-			<div id="professionalexperience" class="row section featured topspace">
-				<h2 class="section-title"><span>Professional Experience</span></h2>
-				<div class="row">
-					
-					<!-- QA Lead Position -->
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">Smash | QA Lead (April 2025 - Present)</h3>
-						<p><strong>Environment:</strong> C# .NET, xUnit.net, GitHub, AWS, Visual Studio Code, Claude Code, Terraform, Azure DevOps, Playwright, Cypress, NuGet, JMeter, Datadog, SQS, Kafka</p>
-						
-						<p><em>Leading QA initiatives for migration from monolithic .NET architecture to cloud-based, event-driven microservices. Responsible for quality assurance across the core Documents team, managing complex testing strategies for distributed systems including multiple APIs (Metadata, Content, Accounts) and event-driven workflows utilizing SQS and Kafka streams.</em></p>
+				<div class="entries">
 
-						<li>Lead comprehensive QA strategy across the platform evolution team, overseeing the entire testing pyramid including Unit, Contract, Integration, E2E, Synthetic, and Performance testing for event-driven architecture.</li>
-						<br>
-						<li>Architect and implement testing strategies for distributed systems with event streaming, ensuring data integrity and message flow validation across SQS and Kafka streams consumed by downstream teams (OCR, Search, Navigation).</li>
-						<br>
-						<li>Coordinate testing efforts for multiple API domains (Metadata, Content, Accounts) and event processors/publishers, ensuring seamless integration across microservices architecture.</li>
-						<br>
-						<li>Partner with engineering managers and lead developers to continuously refine test strategies aligned with cloud migration initiatives, architectural changes, and business priorities.</li>
-						<br>
-						<li>Mentor QA engineers on event-driven testing patterns, message queue validation, and distributed system quality assurance.</li>
-					</div>
+					<!-- QA Lead -->
+					<article class="entry reveal">
+						<div class="entry__aside">
+							<span class="entry__num" aria-hidden="true">01</span>
+							<time class="entry__date" datetime="2025-04">Apr 2025 — Present</time>
+						</div>
+						<div class="entry__body">
+							<h3>Smash <span class="sep">/</span> <span class="role">QA Lead</span></h3>
+							<p class="entry__summary">
+								Leading QA initiatives for the migration from a monolithic .NET architecture
+								to cloud-based, event-driven microservices — owning quality assurance across the
+								core Documents team and its distributed testing strategies for multiple APIs
+								and SQS/Kafka event-driven workflows.
+							</p>
+							<p class="entry__env">
+								<b>Environment</b>
+								C# <i>·</i> .NET <i>·</i> xUnit.net <i>·</i> GitHub <i>·</i> AWS <i>·</i>
+								Terraform <i>·</i> Azure DevOps <i>·</i> Playwright <i>·</i> Cypress <i>·</i>
+								JMeter <i>·</i> Datadog <i>·</i> SQS <i>·</i> Kafka <i>·</i> NuGet
+							</p>
+							<ul class="entry__list">
+								<li>Lead comprehensive QA strategy across the platform evolution team, overseeing the entire testing pyramid — Unit, Contract, Integration, E2E, Synthetic and Performance testing — for event-driven architecture.</li>
+								<li>Architect testing strategies for distributed systems with event streaming, ensuring data integrity and message-flow validation across SQS and Kafka streams consumed by downstream teams (OCR, Search, Navigation).</li>
+								<li>Coordinate testing efforts for multiple API domains (Metadata, Content, Accounts) and event processors/publishers, ensuring seamless integration across the microservices architecture.</li>
+								<li>Partner with engineering managers and lead developers to continuously refine test strategies aligned with cloud migration initiatives, architectural changes and business priorities.</li>
+								<li>Mentor QA engineers on event-driven testing patterns, message-queue validation and distributed-system quality assurance.</li>
+							</ul>
+						</div>
+					</article>
 
-					<!-- Senior QA Automation Engineer Position -->
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">Smash | Senior Quality Assurance Automation Engineer (July 2022 - April 2025)</h3>
-						<p><strong>Modernization Team (Aug 2022 - July 2024)</strong></p>
-						<p><strong>Environment:</strong> C# .NET, xUnit.net, GitHub, Azure B2C, Visual Studio Code, GitHub Copilot, Terraform, Azure DevOps, Selenium, Cypress, NuGet</p>
+					<!-- Senior QA Automation Engineer -->
+					<article class="entry reveal">
+						<div class="entry__aside">
+							<span class="entry__num" aria-hidden="true">02</span>
+							<time class="entry__date" datetime="2022-07">Jul 2022 — Apr 2025</time>
+						</div>
+						<div class="entry__body">
+							<h3>Smash <span class="sep">/</span> <span class="role">Senior QA Automation Engineer</span></h3>
 
-						<li>Architected and developed three distinct test automation frameworks supporting the monolith-to-microservices modernization: E2E framework (C#, Selenium, FluentAssertions), Integration/API framework (xUnit, C#), and Frontend framework (Cypress for React).</li>
-						<br>
-						<li>Designed and implemented a comprehensive Testing SDK with reusable client methods for API testing, packaged as a NuGet library for seamless integration across testing environments.</li>
-						<br>
-						<li>Collaborated with distributed remote teams to strategically plan and execute the refactoring initiative, ensuring quality gates throughout the migration.</li>
-						<br>
+							<p class="entry__team">Modernization Team <span>Aug 2022 — Jul 2024</span></p>
+							<p class="entry__env">
+								<b>Environment</b>
+								C# <i>·</i> .NET <i>·</i> xUnit.net <i>·</i> Azure B2C <i>·</i>
+								GitHub Copilot <i>·</i> Terraform <i>·</i> Azure DevOps <i>·</i>
+								Selenium <i>·</i> Cypress <i>·</i> NuGet
+							</p>
+							<ul class="entry__list">
+								<li>Architected and developed three distinct test automation frameworks supporting the monolith-to-microservices modernization: an E2E framework (C#, Selenium, FluentAssertions), an Integration/API framework (xUnit, C#) and a frontend framework (Cypress for React).</li>
+								<li>Designed and implemented a comprehensive Testing SDK with reusable client methods for API testing, packaged as a NuGet library for seamless integration across testing environments.</li>
+								<li>Collaborated with distributed remote teams to strategically plan and execute the refactoring initiative, ensuring quality gates throughout the migration.</li>
+							</ul>
 
-						<p><strong>Organizers Team (Jul 2022 - Aug 2023)</strong></p>
-						<p><strong>Environment:</strong> C# .NET, xUnit.net, Microsoft SQL Server, Azure DevOps, Fiddler, PowerShell, TestStack.White, FlaUI</p>
+							<p class="entry__team">Organizers Team <span>Jul 2022 — Aug 2023</span></p>
+							<p class="entry__env">
+								<b>Environment</b>
+								C# <i>·</i> .NET <i>·</i> xUnit.net <i>·</i> MS SQL Server <i>·</i>
+								Azure DevOps <i>·</i> Fiddler <i>·</i> PowerShell <i>·</i>
+								TestStack.White <i>·</i> FlaUI
+							</p>
+							<ul class="entry__list">
+								<li>Conducted comprehensive manual testing while collaborating closely with development teams to ensure timely test-case creation aligned with software requirements.</li>
+								<li>Developed and maintained detailed test plans, test cases and test suites within Azure DevOps, ensuring thorough coverage for each sprint.</li>
+								<li>Used Fiddler for API traffic monitoring and analysis, simulating error responses to validate application error-handling capabilities.</li>
+							</ul>
+						</div>
+					</article>
 
-						<li>Conducted comprehensive manual testing while collaborating closely with development teams to ensure timely test case creation aligned with software requirements.</li>
-						<br>
-						<li>Developed and maintained detailed test plans, test cases, and test suites within Azure DevOps, ensuring thorough test coverage for each sprint.</li>
-						<br>
-						<li>Utilized Fiddler for API traffic monitoring and analysis, simulating error responses to validate application error-handling capabilities.</li>
-					</div>
+					<!-- Full Stack Developer -->
+					<article class="entry reveal">
+						<div class="entry__aside">
+							<span class="entry__num" aria-hidden="true">03</span>
+							<time class="entry__date" datetime="2020-01">Jan 2020 — Aug 2020</time>
+						</div>
+						<div class="entry__body">
+							<h3>RGT Global <span class="sep">/</span> <span class="role">Full Stack Developer</span></h3>
+							<p class="entry__env">
+								<b>Environment</b>
+								Python <i>·</i> Angular <i>·</i> Ionic <i>·</i> Flask <i>·</i> MySQL <i>·</i>
+								MongoDB <i>·</i> Redis <i>·</i> Celery <i>·</i> Docker <i>·</i>
+								SocketIO <i>·</i> NumPy <i>·</i> Pandas
+							</p>
+							<ul class="entry__list">
+								<li>Architected a scalable microservices-based Reports API using Python, Flask, NumPy and Pandas in Docker containers, implementing data aggregation and analysis for business-intelligence reporting.</li>
+								<li>Built a cross-platform mobile application with Ionic and Angular, implementing responsive UI/UX patterns across iOS, Android and web.</li>
+								<li>Designed a secure payment-processing system integrated with multiple gateways (Stripe, PayPal), incorporating PCI compliance standards and transaction-validation logic.</li>
+								<li>Developed a full-stack real-time betting-game proof of concept with WebSocket communication (SocketIO): Angular frontend, Python backend and MongoDB persistence.</li>
+								<li>Implemented asynchronous task processing using Celery with a Redis message broker for background jobs, improving responsiveness for high-volume operations.</li>
+								<li>Performed advanced data analysis and ETL with NumPy and Pandas, creating automated reporting pipelines that provided actionable business insights.</li>
+							</ul>
+						</div>
+					</article>
 
-					<!-- RGT Global - Full Stack Developer -->
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">RGT Global | Full Stack Developer (Jan 2020 - Aug 2020)</h3>
-						<p><strong>Environment:</strong> Python, Angular, Ionic, Flask, MySQL, MongoDB, Redis, Celery, Docker, SocketIO, NumPy, Pandas</p>
-						
-						<li>Architected and developed scalable microservices-based Reports API using Python, Flask, NumPy, and Pandas in Docker containers, implementing data aggregation and analysis features for business intelligence reporting.</li>
-						<br>
-						<li>Built cross-platform mobile application with Ionic and Angular, implementing responsive UI/UX design patterns and ensuring consistent experience across iOS, Android, and web platforms.</li>
-						<br>
-						<li>Designed and implemented secure payment processing system integrated with multiple payment gateways (Stripe, PayPal), incorporating PCI compliance standards and transaction validation logic.</li>
-						<br>
-						<li>Developed full-stack real-time betting game proof of concept featuring WebSocket communication (SocketIO), demonstrating proficiency in building interactive applications with Angular frontend, Python backend, and MongoDB for data persistence.</li>
-						<br>
-						<li>Implemented asynchronous task processing using Celery with Redis message broker for handling background jobs, improving application responsiveness and scalability for high-volume operations.</li>
-						<br>
-						<li>Performed advanced data analysis and ETL operations using Python, NumPy, and Pandas, creating automated reporting pipelines that provided actionable business insights.</li>
-					</div>
-
-					<!-- Universidad de Costa Rica - Software Developer -->
-					<div class="col-sm-6 col-md-3">
-						<h3 class="text-center">Universidad de Costa Rica | Software Developer (Jan 2018 - Jan 2019)</h3>
-						<p><strong>Environment:</strong> Java, PHP, WordPress, Docker, LibreOffice SDK, Shell Script, Batch Script, Git</p>
-						
-						<li>Led research and development initiatives focused on Free and Open Source Software (FOSS) solutions, evaluating technologies and implementing systems to benefit university operations and reduce software licensing costs.</li>
-						<br>
-						<li>Developed custom Java extension for LibreOffice using the LibreOffice SDK, implementing automation features and custom functionality that improved document processing efficiency for university administrative staff.</li>
-						<br>
-						<li>Architected and maintained WordPress-based institutional website, implementing custom themes and plugins while establishing Docker-based development environment to ensure consistency across development, staging, and production.</li>
-						<br>
-						<li>Designed and developed cross-platform software installer using Java, implementing platform detection logic and automated deployment scripts (Shell Script for Linux/macOS, Batch Script for Windows) to simplify software distribution.</li>
-						<br>
-						<li>Created comprehensive technical documentation and training materials, delivering hands-on training sessions to university staff to facilitate adoption of newly developed tools.</li>
-						<br>
-						<li>Collaborated with university departments to identify workflow inefficiencies and pain points, developing custom automation solutions that reduced manual processes and improved operational efficiency.</li>
-					</div>
+					<!-- Software Developer -->
+					<article class="entry reveal">
+						<div class="entry__aside">
+							<span class="entry__num" aria-hidden="true">04</span>
+							<time class="entry__date" datetime="2018-01">Jan 2018 — Jan 2019</time>
+						</div>
+						<div class="entry__body">
+							<h3>Universidad de Costa Rica <span class="sep">/</span> <span class="role">Software Developer</span></h3>
+							<p class="entry__env">
+								<b>Environment</b>
+								Java <i>·</i> PHP <i>·</i> WordPress <i>·</i> Docker <i>·</i>
+								LibreOffice SDK <i>·</i> Shell Script <i>·</i> Batch Script <i>·</i> Git
+							</p>
+							<ul class="entry__list">
+								<li>Led R&amp;D initiatives focused on Free and Open Source Software (FOSS), evaluating technologies and implementing systems to reduce software-licensing costs for university operations.</li>
+								<li>Developed a custom Java extension for the LibreOffice SDK with automation features and custom functionality that improved document-processing efficiency for administrative staff.</li>
+								<li>Architected and maintained the WordPress-based institutional website — custom themes and plugins — with a Docker-based environment for development, staging and production consistency.</li>
+								<li>Designed a cross-platform installer in Java with platform-detection logic and automated deployment scripts (Shell for Linux/macOS, Batch for Windows).</li>
+								<li>Created comprehensive technical documentation and training materials, delivering hands-on sessions to university staff to drive adoption of new tools.</li>
+								<li>Collaborated with university departments to identify workflow inefficiencies, developing automation solutions that reduced manual processes.</li>
+							</ul>
+						</div>
+					</article>
 
 				</div>
-			</div> <!-- / section -->
+			</div>
+		</section>
 
-
-
-			<div id="fullresume" class="row section topspace">
-				<div class="panel panel-cta">
-					<div class="panel-body">
-<!-- 						<div class="col-lg-8">
-							<p>A simple, nice-looking <b>call to action box</b>. Boxing is about respect. getting it for
-								yourself,
-								and taking it away from the other guy. no, this is mount everest. </p>
-						</div> -->
-						<div  class="col-lg-12 text-center">
-							<a href="./assets/XavierMarchena-resume.pdf"
-								class="btn btn-primary btn-lg" download target="_blank">Download Full Resume</a>
+		<!-- ====================================================================
+		     04 — Résumé band
+		     ==================================================================== -->
+		<section class="section band" id="resume" aria-labelledby="resume-title">
+			<div class="container">
+				<div class="band__inner">
+					<div class="reveal">
+						<p class="section-head__index"><span><b>04</b> — Résumé</span></p>
+						<h2 id="resume-title">Get the complete picture.</h2>
+						<p>Download the full résumé for extended experience, skills and credentials.</p>
+					</div>
+					<div class="band__aside reveal" style="--reveal-delay: 100ms">
+						<p class="band__file">PDF · 233 KB · EN</p>
+						<div class="band__actions">
+							<a class="btn btn--solid" href="./assets/XavierMarchena-resume.pdf" download>
+								Download PDF
+								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+							</a>
+							<a class="btn btn--on-ink" href="mailto:xmarchena.xm@gmail.com">Email me</a>
 						</div>
 					</div>
 				</div>
-			</div> <!-- /section -->
+			</div>
+		</section>
 
-			<div id="education" class="row section topspace">
-				<h2 class="section-title"><span>Education</span></h2>
-				<div class="col-lg-12">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h4><strong>Bachelor's Degree in Computer Systems Engineering</strong></h4>
-							<p>Universidad Fidélidas, San José, Costa Rica</p>
-						</div>
+		<!-- ====================================================================
+		     05 — Education
+		     ==================================================================== -->
+		<section class="section section--alt" id="education" aria-labelledby="education-title">
+			<div class="container">
+				<header class="section-head">
+					<p class="section-head__index"><span><b>05</b> — Education</span><span>Degree</span></p>
+					<h2 id="education-title">Academic background</h2>
+				</header>
+
+				<div class="record reveal">
+					<p class="record__num">01</p>
+					<div class="record__main">
+						<h3>Bachelor's Degree in Computer Systems Engineering</h3>
+						<p class="record__meta">Universidad Fidélidas — San José, Costa Rica</p>
 					</div>
 				</div>
-			</div> <!-- /section -->
+			</div>
+		</section>
 
-			<div id="certifications" class="row section clients topspace">
-				<h2 class="section-title"><span>Certifications</span></h2>
-				<div class="col-lg-12 text-center">
-					<p><a href="https://atsqa.org/certified-testers/profile/fec2d6bd45a54e678e2ff7bca3156394" target="_blank">
-						<img src="assets/images/sample_clients.png" alt="">
-					   </a>
-					</p>
+		<!-- ====================================================================
+		     06 — Certifications
+		     ==================================================================== -->
+		<section class="section" id="certifications" aria-labelledby="certifications-title">
+			<div class="container">
+				<header class="section-head">
+					<p class="section-head__index"><span><b>06</b> — Certifications</span><span>Verified</span></p>
+					<h2 id="certifications-title">Professional certifications</h2>
+				</header>
+
+				<div class="cert">
+					<div class="cert__info reveal">
+						<h3>ISTQB® Certified Tester</h3>
+						<p>
+							International Software Testing Qualifications Board — Foundation and Advanced
+						 levels, publicly verifiable.
+						</p>
+						<a class="link-arrow" href="https://atsqa.org/certified-testers/profile/fec2d6bd45a54e678e2ff7bca3156394" target="_blank" rel="noopener">
+							View public profile
+							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+						</a>
+					</div>
+
+					<a class="cert__frame reveal" style="--reveal-delay: 100ms" href="https://atsqa.org/certified-testers/profile/fec2d6bd45a54e678e2ff7bca3156394" target="_blank" rel="noopener">
+						<img src="assets/images/sample_clients.png" alt="ISTQB certified tester badges: Advanced Level Test Automation Engineer and Foundation Level" loading="lazy" width="883" height="625">
+						<span class="cert__caption">
+							ISTQB® Badges — 2022
+							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+						</span>
+					</a>
 				</div>
-			</div> <!-- /section -->
-
-		</div> <!-- /container -->
+			</div>
+		</section>
 
 	</main>
 
-	<footer id="footer">
+	<!-- ====================================================================
+	     Footer
+	     ==================================================================== -->
+	<footer class="site-footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Contact</h3>
-					<div class="widget-body">
-						<p><br>
-							<a href="mailto:xmarchena.xm@gmail.com">xmarchena.xm@gmail.com</a><br>
-							<br>
-							San José, Costa Rica
-						</p>
-					</div>
+			<p class="footer-flourish" aria-hidden="true">Xavier Marchena</p>
+
+			<div class="site-footer__contact">
+				<span class="mono">Get in touch</span>
+				<a class="footer-mail" href="mailto:xmarchena.xm@gmail.com">xmarchena.xm@gmail.com</a>
+			</div>
+
+			<div class="site-footer__grid">
+				<div>
+					<h2>Location</h2>
+					<address>
+						<p>San José, Costa Rica</p>
+					</address>
 				</div>
 
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Follow me</h3>
-					<div class="widget-body">
-						<p class="follow-me-icons">
-							<!-- <a href=""><i class="fa fa-twitter fa-2"></i></a> -->
-							<!-- <a href=""><i class="fa fa-dribbble fa-2"></i></a> -->
-							<a href="https://github.com/XavierMarchena"><i class="fa fa-github fa-2"></i></a>
-							<a href="https://www.linkedin.com/in/xavier-marchena-357bb617b/"><i class="fa fa-linkedin fa-2"></i></a>
-							<!-- <a href=""><i class="fa fa-facebook fa-2"></i></a> -->
-						</p>
-					</div>
+				<div>
+					<h2>Follow</h2>
+					<ul>
+						<li>
+							<a href="https://github.com/XavierMarchena" target="_blank" rel="noopener">
+								GitHub
+								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/xavier-marchena-357bb617b/" target="_blank" rel="noopener">
+								LinkedIn
+								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+							</a>
+						</li>
+					</ul>
 				</div>
 
-				<div class="col-md-3 widget">
-<!-- 					<h3 class="widget-title">Text widget</h3>
-					<div class="widget-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum
-							quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia
-							asperiores adipisci maxime!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum
-							quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia
-							asperiores adipisci maxime!</p>
-					</div> -->
+				<div>
+					<h2>Index</h2>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#work">Recent works</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#resume">Résumé</a></li>
+					</ul>
 				</div>
+			</div>
 
-				<div class="col-md-3 widget">
-<!-- 					<h3 class="widget-title">Form widget</h3>
-					<div class="widget-body">
-						<p>+234 23 9873237<br>
-							<a href="mailto:#">some.email@somewhere.com</a><br>
-							<br>
-							234 Hidden Pond Road, Ashland City, TN 37015
-						</p>
-					</div> -->
-				</div>
-
-			</div> <!-- /row of widgets -->
+			<div class="site-footer__bottom">
+				<p>© 2026, Xavier Marchena</p>
+				<p>Original template: <a href="https://www.gettemplate.com" rel="noopener">Initio by GetTemplate</a>, used under <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">CC BY 3.0</a> — redesigned</p>
+			</div>
 		</div>
 	</footer>
 
-	<footer id="underfooter">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-6 widget">
-					<div class="widget-body">
-						<!-- <p>234 Hidden Pond Road, Ashland City, TN 37015 </p> -->
-					</div>
-				</div>
-
-				<div class="col-md-6 widget">
-					<div class="widget-body">
-						<p class="text-right">
-							Copyright &copy; 2025, Xavier Marchena<br>
-							Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> </p>
-					</div>
-				</div>
-
-			</div> <!-- /row of widgets -->
-		</div>
-	</footer>
-
-
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/template.js"></script>
+	<script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
