@@ -1,0 +1,232 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/beam-free",
+  "default_agent": "orchestrator",
+  "mcp": {
+    "servers": {
+      "github": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-github"
+        ],
+        "environment": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+        }
+      },
+      "playwright": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@playwright/mcp@latest",
+          "--caps=pdf"
+        ],
+        "enabled": true
+      }
+    },
+    // ── Activos con timeout de 60s para evitar fallos en primer arranque ──
+    "pdf-reader": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "@sylphx/anymd@latest"
+      ]
+    },
+    "openalex": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/openalex-mcp-server@latest"
+      ]
+    },
+    "crossref": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/crossref-mcp-server@latest"
+      ]
+    },
+    "semantic-scholar": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "mcp-semanticscholar@latest"
+      ]
+    },
+    "zotero": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "@oscardvs/zoteus@latest"
+      ]
+    },
+    "youtube-transcript": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "@sinco-lab/mcp-youtube-transcript@latest"
+      ]
+    },
+    "ppt": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "C:\\Users\\xavim\\AppData\\Roaming\\Python\\Python314\\Scripts\\ppt_mcp_server.exe"
+      ]
+    },
+    "fetch": {
+      "type": "local",
+      "enabled": true,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "mcp-fetch-server@latest"
+      ]
+    },
+    // ── Búsqueda web opcional (requieren clave) ──
+    "tavily": {
+      "type": "local",
+      "enabled": false,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "tavily-mcp@latest"
+      ],
+      "environment": {
+        "TAVILY_API_KEY": "{env:TAVILY_API_KEY}"
+      }
+    },
+    "brave-search": {
+      "type": "local",
+      "enabled": false,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "brave-search-mcp@latest"
+      ],
+      "environment": {
+        "BRAVE_API_KEY": "{env:BRAVE_API_KEY}"
+      }
+    },
+    "exa": {
+      "type": "local",
+      "enabled": false,
+      "timeout": 60000,
+      "command": [
+        "npx",
+        "-y",
+        "exa-mcp@latest"
+      ],
+      "environment": {
+        "EXA_API_KEY": "{env:EXA_API_KEY}"
+      }
+    },
+    // ── Sin uso (apagados) ──
+    "chrome-devtools": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "git": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/git-mcp-server@latest"
+      ]
+    },
+    "arxiv": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/arxiv-mcp-server@latest"
+      ]
+    },
+    "pubmed": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/pubmed-mcp-server@latest"
+      ]
+    },
+    "europepmc": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@pipeworx/mcp-europepmc@latest"
+      ]
+    },
+    "orcid": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/orcid-mcp-server@latest"
+      ]
+    },
+    "wikipedia": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "wikipedia-mcp@latest"
+      ]
+    },
+    "filesystem": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem@latest",
+        "C:\\Users\\xavim\\academic-agent"
+      ]
+    },
+    "memory": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory@latest"
+      ]
+    }
+  }
+}
